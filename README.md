@@ -26,30 +26,38 @@ As a User
 In order to play the game according to rules
 I need to be able to choose between Rock, Paper and Scissors for my turn.
 ```
+* A function that takes the user input
 
 ```
 As a User
 In order to play the game according to rules
 I need the computer to randomly choose between Rock, Paper and Scissors.
 ```
+* A function (algorithm?) for a random selection
+
 
 ```
 As a User
 In order to play the game according to rules
 I need the app to determine the winner.
 ```
+* A function that takes the user input and computers choice and determines the winner
+* And displays it in a message
 
 ```
 As a User
 In order to keep track of my score
 I want the app to keep a scoreboard.
 ```
+* Function that raises score for the winner
+* And display a message
 
 ```
 As a User
 In order to start a new game
 I want to have a "reset game" option.
 ```
+* reset button (reload the page?)
 
 
 
