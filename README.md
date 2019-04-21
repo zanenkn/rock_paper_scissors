@@ -18,9 +18,40 @@ Paper vs Scissors -> Scissors win
 # Problem statement
 The customer wants an app for Rock Paper Scissors game where the player picks between the three options and then is presented with computers (random) choice. The app is determining the winner according to the game rules.
 
-
-
 <br>
+
+# User Stories
+```
+As a User
+In order to play the game according to rules
+I need to be able to choose between Rock, Paper and Scissors for my turn.
+```
+
+```
+As a User
+In order to play the game according to rules
+I need the computer to randomly choose between Rock, Paper and Scissors.
+```
+
+```
+As a User
+In order to play the game according to rules
+I need the app to determine the winner.
+```
+
+```
+As a User
+In order to keep track of my score
+I want the app to keep a scoreboard.
+```
+
+```
+As a User
+In order to start a new game
+I want to have a "reset game" option.
+```
+
+
 
 # Deployment
 
