@@ -19,22 +19,25 @@ function SetComputersChoice() {
 
 // Determining the winner
 document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('click', event => {
-        event.preventDefault();
-    
-        SetComputersChoice();
+    let choice = document.querySelectorAll("button[tag='choice']")
+    for(var i = 0; i < choice.length; i++){
 
-        if (UserChoice == ComputersChoice) {
-            document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. It is a tie.`
-        } else if (
-            (UserChoice == "rock" && ComputersChoice == "scissors") ||
-            (UserChoice == "scissors" && ComputersChoice == "paper") ||
-            (UserChoice == "paper" && ComputersChoice == "rock")
-        ) {
-            document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. You win!`
-        } else {
-            document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. You lose!`
-        }    
+        choice[i].addEventListener("click", function() {
+            event.preventDefault();
+            SetComputersChoice();
 
-    })
-});
+            if (UserChoice == ComputersChoice) {
+                document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. It is a tie.`
+            } else if (
+                (UserChoice == "rock" && ComputersChoice == "scissors") ||
+                (UserChoice == "scissors" && ComputersChoice == "paper") ||
+                (UserChoice == "paper" && ComputersChoice == "rock")
+            ) {
+                document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. You win!`
+            } else {
+                document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. You lose!`
+            }    
+        })    
+    }
+
+})
