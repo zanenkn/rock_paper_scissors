@@ -1,10 +1,3 @@
-
-
-function RockPaperScissors () {
-
-    
-}
-
 //Users choice by clicking button
 
 function SetUserChoice(choice) {
@@ -19,6 +12,29 @@ function SetComputersChoice() {
     } else if (num==2) {
         ComputersChoice="paper"
     } else {ComputersChoice="scissors"}
+    
+    return ComputersChoice
 }
 
-SetComputersChoice();
+
+// Determining the winner
+document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('click', event => {
+        event.preventDefault();
+    
+        SetComputersChoice();
+
+        if (UserChoice == ComputersChoice) {
+            document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. It is a tie.`
+        } else if (
+            (UserChoice == "rock" && ComputersChoice == "scissors") ||
+            (UserChoice == "scissors" && ComputersChoice == "paper") ||
+            (UserChoice == "paper" && ComputersChoice == "rock")
+        ) {
+            document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. You win!`
+        } else {
+            document.getElementById("message").innerHTML = `You chose ${UserChoice}, computer chose ${ComputersChoice}. You lose!`
+        }    
+
+    })
+});
