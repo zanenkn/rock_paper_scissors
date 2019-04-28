@@ -9,24 +9,3 @@ describe ("Rock Paper Scissors", () => {
     });
 
 })
-
-// describe ("Rock Paper Scissors", () => {
-//     // let rockPaperScissors = new RockPaperScissors
-//     // let computerChoice = new ComputerChoice
-//     let userChoice = "Rock"
-
-//     if(computerChoice = "Rock") {
-//         it("game is a tie", () =>{
-//             expect(rockPaperScissors.message).to.eql("Game is a tie")
-//         })
-//     } else if(computerChoice = "Paper") {
-//         it("game is lost", () => {
-//             expect(rockPaperScissors.message).to.eql("You lost!")
-//         })
-//     } else {
-//         it("game is won", () => {
-//             expect(rockPaperScissors.message).to.eql("You won!")
-//         })
-//     }
-
-// })

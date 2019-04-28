@@ -23,9 +23,4 @@ context('The game', () => {
     expect(content).to.contain('You chose rock, computer chose scissors. You win!');
   });
 
-  // it('by choosing a "Rock" for her turn', async () => {
-  //   await browser.clickOnButton("input[id='Rock']")
-  //   let message = await browser.getContent("[id='message']")
-  //   expect(message).to.eql(String)
-  // });
 });
