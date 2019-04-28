@@ -1,25 +1,11 @@
-const { RockPaperScissors } =  require('../spec.helper')
-const { ComputerChoice } =  require('../spec.helper')
-let {UserChoice} = require('../spec.helper')
+require('../spec.helper')
+var sinon = require('sinon');
 
 describe ("Rock Paper Scissors", () => {
-    before(async () => {
-        await browser.init()
-        await browser.visitPage('http://localhost:8080/')
-      });
-    
-      beforeEach(async () => {
-        await browser.page.reload();
-      });
-    
-      after(() => {
-        browser.close();
-      });
-    //let rockPaperScissors = new RockPaperScissors
-
-    it("takes a user input as a user choice", async () => {
-        await browser.clickOnButton("button[id='rock']")
-        expect(UserChoice()).to.eql("rock")
+    it("stub works", () => {
+      let comp = new Computer
+      sinon.stub(comp, 'choice').returns("rock")
+      expect(comp.choice()).to.eql("rock")
     });
 
 })

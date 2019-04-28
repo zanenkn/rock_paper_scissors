@@ -4,14 +4,31 @@ function setUserChoice(choice) {
 }
 
 // Computers choice (random)
-const Computer = {
-    choice: function () {
-        let num = Math.floor((Math.random() * 3) + 1)
-        if (num==1) {
-            return "rock"
-        } else if (num==2) {
-            return "paper"
-        } else {return "scissors"}
+// const Computer = {
+//     choice: function () {
+//         let num = Math.floor((Math.random() * 3) + 1)
+//         if (num==1) {
+//             return computersChoice = "rock"
+//         } else if (num==2) {
+//             return computersChoice = "paper"
+//         } else {return computersChoice = "scissors"}
+        
+//     }
+// }
+
+
+
+class Computer {
+    constructor(choice) {
+        this.choice = function () {
+            let num = Math.floor((Math.random() * 3) + 1)
+            if (num==1) {
+                return "rock"
+            } else if (num==2) {
+                return "paper"
+            } else {return "scissors"}
+            
+        }
     }
 }
 

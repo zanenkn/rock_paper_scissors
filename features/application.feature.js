@@ -1,8 +1,7 @@
 require('../spec.helper');
+var sinon = require('sinon');
 
- let SetUserChoice = require('../src/js/rock-paper-scissors')
-
-context('User can input her turn and get a result', () => {
+context('The game', () => {
   before(async () => {
     await browser.init()
     await browser.visitPage('http://localhost:8080/')
@@ -16,10 +15,12 @@ context('User can input her turn and get a result', () => {
     browser.close();
   });
 
-  it("takes a user input as a user choice", async () => {
+  it("returns 'win' message if user picks 'rock' and computer picks 'scissors'", async () => {
+    before sinon.stub(Computer, 'choice').returns(computersChoice = "scissors");
     await browser.clickOnButton("button[id='rock']");
-    SetUserChoice();
-    expect(UserChoice()).to.eql("rock")
+    
+    let content = await browser.getContent("div[id='message']");
+    expect(content).to.contain('You chose rock, computer chose scissors. You win!');
   });
 
   // it('by choosing a "Rock" for her turn', async () => {
