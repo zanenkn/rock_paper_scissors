@@ -3,7 +3,7 @@ function setUserChoice(choice) {
     userChoice = choice
 }
 
-// Computers class and choice
+//Computers class and choice, works with stub1
 class Computer {
     constructor(choice) {
         this.choice = function () {
@@ -17,6 +17,31 @@ class Computer {
     }
 }
 
+// works with stub2 and stub3
+// const Computer = {
+//     choice: function () {
+//         let num = Math.floor((Math.random() * 3) + 1)
+//         if (num == 1) {
+//             return "rock"
+//         } else if (num == 2) {
+//             return "paper"
+//         } else { return "scissors" }
+//     }
+// }
+
+
+
+// const computer = () => {
+//     let num = Math.floor((Math.random() * 3) + 1)
+//     if (num == 1) {
+//         return "rock"
+//     } else if (num == 2) {
+//         return "paper"
+//     } else { return "scissors" }
+// }
+
+
+
 
 // Previous Computers choice function.
 // For reference only
@@ -29,16 +54,19 @@ class Computer {
 //     } else if (num==2) {
 //         computersChoice="paper"
 //     } else {computersChoice="scissors"}
-    
+
 //     return computersChoice
 // }
 
 
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = setUserChoice;
+    module.exports = {setUserChoice, Computer} 
 }
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Computer;
-}
+// if (typeof module !== 'undefined' && module.exports) {
+//     module.exports = Computer;
+// }
+
+
+
 

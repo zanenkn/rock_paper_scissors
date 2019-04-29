@@ -1,11 +1,13 @@
 // Determining the winner
+
+
 document.addEventListener('DOMContentLoaded', () => {
     let choice = document.querySelectorAll("button[tag='choice']")
     for(var i = 0; i < choice.length; i++){
 
         choice[i].addEventListener("click", function() {
             event.preventDefault();
-            let computer= new Computer
+            let computer = new Computer
             let computersChoice = computer.choice();
 
             if (userChoice == computersChoice) {
@@ -22,3 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
         })    
     }
 })
+
