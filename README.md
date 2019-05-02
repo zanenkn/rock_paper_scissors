@@ -59,7 +59,50 @@ I want to have a "reset game" option.
 ```
 * reset button (reload the page?)
 
+<br>
 
+# Learnings about SinonJS
+During this callenge, in order to test randomness of the Computers choice, I researched and explored node.js library [SinonJS](https://sinonjs.org/). SinonJS provides standalone test spies, stubs and mocks for JavaScript. 
+
+That being said, I have not (yet) figured out how to succesfully incorporate Sinon stubs in the acceptance tests. Unit tests for fully functioning stubs can be found in `spec/stub.spec.js`. 
+
+Stub1 works together with following definiton of `Computer`:
+
+```js
+class Computer {
+    constructor(choice) {
+        this.choice = function () {
+            let num = Math.floor((Math.random() * 3) + 1)
+            if (num==1) {
+                return "rock"
+            } else if (num==2) {
+                return "paper"
+            } else {return "scissors"}  
+        }
+    }
+}
+```
+
+Stub2 and Stub3 works together with this:
+
+```js
+works with stub2 and stub3
+const Computer = {
+    choice: function () {
+        let num = Math.floor((Math.random() * 3) + 1)
+        if (num == 1) {
+            return "rock"
+        } else if (num == 2) {
+            return "paper"
+        } else { return "scissors" }
+    }
+}
+```
+
+
+
+
+<br>
 
 # Deployment
 
