@@ -10,7 +10,3 @@ describe ("Rock Paper Scissors", () => {
 
 })
 
-
-
-
-

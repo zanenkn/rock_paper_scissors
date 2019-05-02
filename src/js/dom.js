@@ -1,6 +1,5 @@
 // Determining the winner
 
-
 document.addEventListener('DOMContentLoaded', () => {
     let choice = document.querySelectorAll("button[tag='choice']")
     for(var i = 0; i < choice.length; i++){

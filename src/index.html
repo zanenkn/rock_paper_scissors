@@ -10,12 +10,21 @@
 </head>
 
 <body>
+<div class="button-wrapper">
+    <button class="button" id="rock" tag="choice" onclick=setUserChoice(id)>
+        <img src="./img/rock.svg" width="50%" height="50%">
+    </button>
+    <button class="button" id="paper" tag="choice" onclick=setUserChoice(id)>
+        <img src="./img/paper.svg" width="50%" height="50%">
+    </button>
+    <button class="button" id="scissors" tag="choice" onclick=setUserChoice(id)>
+        <img src="./img/scissors.svg" width="50%" height="50%">
+    </button>
+</div>
 
-<button id="rock" tag="choice" onclick=setUserChoice(id) >Rock</button>
-<button id="paper" tag="choice" onclick=setUserChoice(id)>Paper</button>
-<button id="scissors" tag="choice" onclick=setUserChoice(id)>Scissors</button>
-
-<div id="message"></div>
+<div class="message-wrapper">
+    <div id="message"></div>
+</div>
 
 </body>
 
