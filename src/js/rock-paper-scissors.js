@@ -63,9 +63,9 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = {setUserChoice, Computer} 
 }
 
-// if (typeof module !== 'undefined' && module.exports) {
-//     module.exports = Computer;
-// }
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Computer;
+}
 
 
 

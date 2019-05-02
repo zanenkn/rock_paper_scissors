@@ -9,7 +9,9 @@ describe ("Stub", () => {
   it("stub1 works", () => {
     let comp = new Computer
     sinon.stub(comp, 'choice').returns("rock")
-    expect(comp.choice()).to.eql("rock")
+    
+    expect(comp.choice).to.have.returned("rock")
+    // expect(comp.choice()).to.eql("rock")
   });
 
   // it("stub2 works", () => {
