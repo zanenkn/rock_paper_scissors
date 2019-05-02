@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         choice[i].addEventListener("click", function() {
             event.preventDefault();
-            let computer = new Computer
-            let computersChoice = computer.choice();
+            setComputersChoice();
 
             if (userChoice == computersChoice) {
                 document.getElementById("message").innerHTML = `You chose ${userChoice}, computer chose ${computersChoice}. It is a tie.`
