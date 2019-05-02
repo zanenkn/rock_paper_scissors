@@ -106,7 +106,9 @@ const Computer = {
 
 # Deployment
 
-Deployment - work in progress.
+Deployed via [Netlify](https://app.netlify.com/).
+
+View deployed site [here](https://zanes-rps.netlify.com/).
 
 <br>
 
